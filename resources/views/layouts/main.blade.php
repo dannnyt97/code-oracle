@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('title') | Code Oracle</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
 
-        <!-- Bootstrap core CSS -->
-        <link href="../../../public/assets/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@yield('title') | Code Oracle</title>
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
 
-        <!-- Custom styles for this template -->
-        <link href="../../../public/assets/css/blog-home.css" rel="stylesheet">
-    </head>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <body>
-        <header>
-            <p>Hello</p>
-        </header>
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('assets/css/blog-home.css') }}" rel="stylesheet">
+</head>
 
-        <main></main>
+<body>
 
-        <footer>&copy;Daniel Townsend 2021</footer>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">Code Oracle</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sign-in">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="../../../public/assets/js/jquery.min.js"></script>
-        <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <main>
+        @yield('main')
+    </main>
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Daniel Townsend {{ date('Y') }}</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
 </html>
