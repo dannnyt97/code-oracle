@@ -7,8 +7,8 @@ This will be my own blog website, which I plan to host on Google Cloud.
 Really just using a LAMP Stack for development
 
 ## Backend
-- PHP (Laravel)
+- PHP (Laravel Framework v8)
 - MySQL
 
 ## Frontend
-- Not Sure Yet (Maybe Bootstrap?)
+- Bootstrap v4
