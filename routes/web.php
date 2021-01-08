@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,18 @@ Route::get('/about', function () {
     return view('about');
 });
 
+// Returns the login form page
+Route::get('user/login', function () {
+    return view('user.login');
+});
+
+// Gets POST request from login form
+Route::post('user/login', [UserController::class, 'login'])->name('user.login');
+
+// Returns the register form page
+Route::get('user/register', function ($id) {
+    return view('user.register');
+});
+
+// Gets POST request from register form
+Route::post('user/register', [UserController::class, 'register'])->name('user.register');
